@@ -1,0 +1,26 @@
+import java.util.*;
+class main
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    StringBuilder digits=new StringBuilder();
+    for(int i=0;i<s.length();i++)
+    {
+      char c=s.charAt(i);
+      if(c>='0' && c<='9')
+      { 
+        digits.append(c);
+      }
+   }
+    if(digits.length()>0)
+    {
+    System.out.println(digits.toString());
+      }
+      else
+      System.out.println("0");
+    }
+  }
+
+
