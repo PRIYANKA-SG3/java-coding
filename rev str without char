@@ -1,0 +1,35 @@
+import java.util.*;
+class main
+{
+  public static void reverse(char t[])
+  {
+    int l=0,r=t.length-1;
+    while(l<r)
+      {
+        if(!(Character.isAlphabetic(t[l])))
+        {
+      l++;
+    }
+    else if(!(Character.isAlphabetic(t[r])))
+    {
+      r--;
+    }
+    else 
+    {
+      char tmp=t[l];
+      t[l]=t[r];
+      t[r]=tmp;
+      l++;
+      r--;
+    }
+  }
+}
+public static void main(String[]args)
+{
+  Scanner sc=new Scanner(System.in);
+  String t=sc.nextLine();
+  char[]charArray=t.toCharArray();
+  reverse(charArray);
+  String rev=new String(charArray);
+  System.out.print(rev);
+} }
